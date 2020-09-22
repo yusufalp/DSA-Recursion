@@ -1,20 +1,10 @@
-function reverseString(str) {
-  if (str.length <= 0) {
-    return ''
-  }
-  return reverseString(str.slice(1)) + str.slice(0, 1)
-}
-
-let result = ''
 function binaryOp(num) {
   if (num < 1) {
-    return result
+    return ''
   }
 
-  remainder = num % 2
-  result += remainder.toString()
-
-  return reverseString(binaryOp(parseInt(num / 2)))
+  let remainder = num % 2
+  return binaryOp(parseInt(num / 2)) + remainder.toString()
 }
 
 binaryOp(19)
