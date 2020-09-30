@@ -7,4 +7,4 @@ function binaryOp(num) {
   return binaryOp(parseInt(num / 2)) + remainder.toString()
 }
 
-binaryOp(19)
+binaryOp(25)
