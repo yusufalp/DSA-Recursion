@@ -1,18 +1,9 @@
-let result = 0;
-let fir = 1;
-let sec = 1;
-function fibonacci(num) {
-
-  if (num < 2) {
-    return fir
+function fibonacci(n) {
+  if (n === 0 || n === 1) {
+    return 1
+    const result = fibonacci(n - 1) + fibonacci(n - 2)
+    return result
   }
-
-  num--;
-  result = fir + sec
-  fir = sec
-  sec = result
-
-  return fibonacci(num)
 }
 
 fibonacci(7)
